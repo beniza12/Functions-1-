@@ -1,0 +1,31 @@
+Calculate the Base Fare
+
+
+#include <stdio.h>
+
+float calculateFare(char travelClass){
+    float baseFare;
+    if(travelClass == 'E' || travelClass == 'e'){
+        baseFare =2500.00;
+    }if(travelClass == 'B' || travelClass == 'b'){
+        baseFare =6500.00;
+    }
+    return baseFare;
+}
+
+int main() {
+
+    char travelClass;
+    float baseFare;
+    
+    printf("Enter travel class: ");
+    scanf("%s",&travelClass);
+
+    baseFare = calculateFare(travelClass);
+    
+    printf("Base Fare: Php %.2f", baseFare);
+   
+    
+    return 0;
+}
+
