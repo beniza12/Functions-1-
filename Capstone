@@ -1,4 +1,4 @@
-Calculate the Base Fare
+*Calculate the Base Fare*
 
 
 #include <stdio.h>
@@ -29,3 +29,51 @@ int main() {
     return 0;
 }
 
+*Calculate Baggage*
+
+
+#include <stdio.h>
+
+float checkBaggage(char travelClass, float baggageWeight){
+    float excessBaggageFee;
+    float allowance;
+    
+    if(travelClass == 'B' || travelClass == 'b'){
+        allowance = 40;
+            if(baggageWeight <= allowance){
+                excessBaggageFee = 0;
+            } else{
+                excessBaggageFee = (baggageWeight - allowance)*150;
+            }
+
+    } if(travelClass == 'E' || travelClass == 'e'){
+        allowance = 20;
+        if(baggageWeight <= allowance){
+            excessBaggageFee = 0;
+        }else{
+            excessBaggageFee = (baggageWeight - allowance)*150;
+        }
+    }
+    return excessBaggageFee;
+}
+
+int main() {
+
+    char travelClass;
+    float baggageWeight;
+    float excessBaggageFee;
+
+    printf("Enter travel class: ");
+    scanf("%c",&travelClass);
+
+    printf("Enter Baggage Weight: ");
+    scanf("%f",&baggageWeight);
+
+    excessBaggageFee = checkBaggage(travelClass,baggageWeight);
+
+    printf("Excess Baggage Fee: Php %.2f", excessBaggageFee);
+    
+   
+    
+    return 0;
+}
