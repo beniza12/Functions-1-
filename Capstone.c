@@ -150,7 +150,7 @@ int main(){
     float excessFee;
     float baseFare;
 
-    printf("Enter travel class: ");
+    printf("Enter travel class (E-conomy/ B-usiness): ");
     scanf("%c",&travelClass);
 
     printf("Enter Baggage Weight: ");
