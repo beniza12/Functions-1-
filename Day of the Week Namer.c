@@ -24,6 +24,9 @@ void dayNamer(int num){
 
         case 7:
         printf("Sunday");
+
+        default;
+        printf("Invalid Input");
     }
 }
 
